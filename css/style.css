@@ -1,0 +1,84 @@
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GENERAL SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+:root{
+    --update-color:#8EDAFC;
+    --basic-color:#F3EEEA;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top,
+    #D7DBD6 85%,
+    #009688 85%,
+    #009688 100%);
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GENERAL SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>LEFT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.user-section {
+    border-right: 1px solid gray;
+}
+
+.user-section, 
+.selected-contact-section,
+.input-section{
+    height: 75px;
+    background-color: var(--basic-color);
+}
+
+.update-section{
+    background-color: var(--update-color);
+    height: 83px;
+}
+
+.general-chat-section{
+    background-color: white;
+    overflow-y: auto ;
+    position: relative;
+}
+
+.search-chat-section{
+    height: 51px;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>LEFT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.contact-chat-section{
+    background-image: url(../img/8c98994518b575bfd8c949e91d20548b.jpg);
+    overflow-y: auto;
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.search-chat-section{
+    border: 1px solid black;
+}
