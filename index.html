@@ -12,31 +12,136 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Document</title>
 </head>
-<body id="app d-flex">
+<body id="app" class="d-flex">
     <div class="vh-100 container py-5">
         <div class="row h-100">
-            <div class="col-4 px-0 d-flex flex-column">
-                <div class="user-section">
+            <div class="col-4 px-0 d-flex flex-column h-100">
+                <div class="user-section d-flex justify-content-between">
+                    <div class="user-info d-flex align-items-center gap-2 p-3">
+                        <img src="./img/avatar-png-11554021661asazhxmdnu-removebg-preview.png" alt="">
+                        <h6 class="mb-0">
+                            Nome Utente
+                        </h6>
+                    </div>
+                    <div class="user-option d-flex gap-3 align-items-center p-3">
+                        <a href="#">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        </a>
+                        <a href="#">
+                        <i class="fa-solid fa-message"></i>
+                        </a>
+                        <a href="#">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+                    </div>
 
                 </div>
-                <div class="update-section">
+                <div class="update-section d-flex align-items-center p-4 gap-3">
+                    <div class="bell-icon d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="update-status d-flex flex-column gap-2 justify-content-center">
+                        <p class="update__first__child mb-0">
+                            Ricevi notifiche di nuovi messaggi
+                        </p>
+                        <p class="update__second__child mb-0">
+                            Attiva notifiche desktop
+                        </p>
+                    </div>
+                    
+
 
                 </div>
                 <div class="general-chat-section flex-grow-1">
-                    <div class="search-chat-section">
-
+                    <div class="search-chat-section d-flex align-items-center p-3">
+                        <div class="input-group input-group-sm mb-0 ">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input type="text" class="form-control my-form" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
+                        </div>
                     </div>
+                    <ul class="user-info d-flex gap-2 p-3" v-for="(contact, index) in contacts">
+                        <li class="chat-avatar">
+                            <img src="{{contact.avatar}}">
+                        </li>
+                        <li class="chat-info d-flex flex-column gap-1">
+                            <h6 class="mb-0">
+                                {{contact.name}}
+                            </h6>
+                            <p class="mb-0">
+                                Ultimo messaggio inviato
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-8 d-flex flex-column px-0">
-                <div class="selected-contact-section">
-
+            <div class="col-8 d-flex flex-column px-0 h-100">
+                <div class="selected-contact-section d-flex align-items-center justify-content-between ">
+                    <div class="user-info d-flex align-items-center gap-2 p-3">
+                        <img src="./img/avatar-png-11554021661asazhxmdnu-removebg-preview.png" alt="">
+                        <h6 class="mb-0">
+                            Nome Utente
+                        </h6>
+                    </div>
+                    <div class="user-option d-flex gap-3 align-items-center p-3">
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="contact-chat-section flex-grow-1">
-
+                    <div class="my-container gap-3 py-5">
+                        <div class="card sent align-self-end">
+                            <div class="card-header d-flex justify-content-between gap-3">
+                                <p class="mb-0">
+                                    Hai portato a spasso il cane?
+                                </p>
+                                <span class="time align-self-end">
+                                    15:30
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card sent align-self-end">
+                            <div class="card-header d-flex justify-content-between gap-3">
+                                <p class="mb-0">
+                                    Ricordati di stendere i panni
+                                </p>
+                                <span class="time align-self-end">
+                                    15:50
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card align-self-start">
+                            <div class="card-header d-flex justify-content-between gap-3">
+                                <p class="mb-0">
+                                    Tutto fatto!?
+                                </p>
+                                <span class="time align-self-end">
+                                    16:15
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-section">
 
+                <div class="input-section d-flex align-items-center">
+                    <a href="#" class="col d-flex align-items-center justify-content-center px-0">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </a>
+                    <a href="#" class="col-10 d-flex align-items-center px-0">
+                        <input type="text" class="form-control my-form" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-sm" placeholder="Scrivi un messaggio">
+                    </a>
+                    <a href="#" class="col d-flex align-items-center justify-content-center px-0">
+                        <i class="fa-solid fa-microphone"></i>
+                    </a>
                 </div>
 
             </div>

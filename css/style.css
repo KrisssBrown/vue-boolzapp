@@ -2,6 +2,9 @@
 :root{
     --update-color:#8EDAFC;
     --basic-color:#F3EEEA;
+    --icon-color: #B1B1B1;
+    --bell-color:#F2FBFF;
+    --sent-color:#D5F9BA;
 }
 
 
@@ -19,6 +22,20 @@ img{
     width: 100%;
 }
 
+ul,
+ol,
+li,
+menu{
+    list-style-type: none;
+}
+
+a{
+    color: currentColor;
+    text-decoration: none;
+}
+
+
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GENERAL SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 
@@ -31,7 +48,7 @@ img{
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>LEFT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 .user-section {
-    border-right: 1px solid gray;
+    border-right: 1px solid rgb(168, 165, 165);
 }
 
 .user-section, 
@@ -46,15 +63,49 @@ img{
     height: 83px;
 }
 
+.update-section .bell-icon{
+    background-color: var(--bell-color);
+    border-radius: 900px;
+    height: 50px;
+    width: 50px;
+    color: var(--update-color);
+}
+
+.update__first__child{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.update__second__child{
+    text-decoration: underline;
+}
+
 .general-chat-section{
     background-color: white;
     overflow-y: auto ;
     position: relative;
 }
 
-.search-chat-section{
+.search-chat-section {
     height: 51px;
 }
+
+.search-chat-section .input-group-text{
+    background-color: white;
+    color: gray;
+}
+
+.user-info img{
+    height: 54px;
+    width: 54px;
+    aspect-ratio: 1;
+}
+
+.user-option a{
+    color: var(--icon-color) ;
+    font-size: 16px;
+}
+
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>LEFT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
@@ -69,16 +120,59 @@ img{
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 .contact-chat-section{
-    background-image: url(../img/8c98994518b575bfd8c949e91d20548b.jpg);
+    background-image: url(../img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
     overflow-y: auto;
+}
+
+.my-container{
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    /* border: 1px solid black; */
+}
+
+.card{
+    border-radius: 20px;
+    overflow: hidden;
+    /* padding: 10px 0; */
+}
+
+.card .card-header{
+    padding: 13px 10px;
+}
+
+.time{
+    font-size: 10px;
+    color: gray;
+}
+
+.sent{
+    background-color: var(--sent-color);
+}
+
+    
+
+.input-section .col{
+    font-size: 22px;
 }
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 
 
 
+
+
+
+
+
+
+
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>DEBUG SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
-.search-chat-section{
+/* .search-chat-section{
     border: 1px solid black;
-}
+} */
