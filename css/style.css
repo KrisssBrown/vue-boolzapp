@@ -1,10 +1,17 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GENERAL SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 :root{
     --update-color:#8EDAFC;
-    --basic-color:#F3EEEA;
+    --basic-color:#f5f5f5;
     --icon-color: #B1B1B1;
     --bell-color:#F2FBFF;
     --sent-color:#D5F9BA;
+    --hover-color:#E9EBEB;
+}
+
+*{
+    border:0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 
@@ -20,6 +27,11 @@ body {
 
 img{
     width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    width: 40px;
+    height: 40px;
 }
 
 ul,
@@ -88,11 +100,16 @@ a{
 
 .search-chat-section {
     height: 51px;
+    background-color: var(--basic-color);
 }
 
 .search-chat-section .input-group-text{
     background-color: white;
     color: gray;
+}
+
+.user-info:hover{
+    background-color: var(--hover-color);
 }
 
 .user-info img{
@@ -121,15 +138,15 @@ a{
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 .contact-chat-section{
     background-image: url(../img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
-    overflow-y: auto;
 }
 
 .my-container{
-    max-width: 800px;
+    max-width: 780px;
     height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    /* overflow-y: auto; */
 
     /* border: 1px solid black; */
 }
@@ -153,7 +170,13 @@ a{
     background-color: var(--sent-color);
 }
 
-    
+.chat-panel{
+    position: relative;
+}
+
+.input-section{
+    position: sticky;
+}
 
 .input-section .col{
     font-size: 22px;

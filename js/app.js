@@ -172,7 +172,14 @@ const contacts = [
 createApp({
     data() {
         return {
-            contacts: contacts
+            contacts: contacts,
+            currentIndex: 0
+        }
+    },
+
+    methods:{
+        isActive(){
+
         }
     }
 }).mount('#app');

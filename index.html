@@ -61,9 +61,9 @@
                             <input type="text" class="form-control my-form" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
                         </div>
                     </div>
-                    <ul class="user-info d-flex gap-2 p-3" v-for="(contact, index) in contacts">
+                    <ul class="user-info d-flex gap-2 p-3 mb-0" v-for="(contact, index) in contacts">
                         <li class="chat-avatar">
-                            <img src="{{contact.avatar}}">
+                            <img :src="contact.avatar">
                         </li>
                         <li class="chat-info d-flex flex-column gap-1">
                             <h6 class="mb-0">
