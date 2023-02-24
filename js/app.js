@@ -1,4 +1,7 @@
 const { createApp } = Vue; //Vue
+
+const { DateTime } = luxon // Luxon
+
 //App
 
 
@@ -26,7 +29,7 @@ const contacts = [
         ],
     },
     {
-        name: "Fabio",
+        name: "Fabiola",
         avatar: "./img/avatar_2.png",
         visible: true,
         messages: [
@@ -70,7 +73,7 @@ const contacts = [
         ],
     },
     {
-        name: "Alessandro B.",
+        name: "Alessandra B.",
         avatar: "./img/avatar_4.png",
         visible: true,
         messages: [
@@ -87,7 +90,7 @@ const contacts = [
         ],
     },
     {
-        name: "Alessandro L.",
+        name: "Alessandra L.",
         avatar: "./img/avatar_5.png",
         visible: true,
         messages: [
@@ -104,13 +107,13 @@ const contacts = [
         ],
     },
     {
-        name: "Claudia",
+        name: "Claudio",
         avatar: "./img/avatar_6.png",
         visible: true,
         messages: [
             {
                 date: "10/01/2020 15:30:55",
-                message: "Ciao Claudia, hai novità?",
+                message: "Ciao Claudio, hai novità?",
                 status: "sent"
             },
             {
@@ -126,7 +129,7 @@ const contacts = [
         ],
     },
     {
-        name: "Federico",
+        name: "Federica",
         avatar: "./img/avatar_7.png",
         visible: true,
         messages: [
@@ -168,18 +171,46 @@ const contacts = [
 
 
 
-
 createApp({
     data() {
         return {
             contacts: contacts,
-            currentIndex: 0
+            currentIndex: 0,
+            inputValue: '',
+            // now: DateTime.now(),
+            // dateToParse: contacts[index].
         }
     },
 
-    methods:{
-        isActive(){
+    // computed: {
+    //     messageDate(){
+    //         return contacts[this.currentIndex].messages[this.currentIndex].date
+    //     }
+    // },
+
+    methods: {
+        toggleActive(index) {
+            this.currentIndex = index;
+            // console.log('visibilità', this.contacts[index].visible);
+            // console.log(contacts[index]);
+            // console.log(contacts[this.currentIndex].messages[this.currentIndex].date)
+
+        },
+
+        addMessage(){
+
+            const newMessage = { date: '10/01/2020 15:50:00', message: this.inputValue, status: 'sent'}
+            this.contacts[this.currentIndex].messages.push(newMessage)
+            this.inputValue = ''
 
         }
+    },
+
+    mounted() {
+        // console.log(contacts[this.currentIndex].messages[this.currentIndex].date)
     }
+
+
+
+    
 }).mount('#app');

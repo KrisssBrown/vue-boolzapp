@@ -138,6 +138,7 @@ a{
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>RIGHT SECTION<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 .contact-chat-section{
     background-image: url(../img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+    overflow-y: auto;
 }
 
 .my-container{
@@ -146,36 +147,70 @@ a{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /* overflow-y: auto; */
 
     /* border: 1px solid black; */
 }
 
-.card{
+.chat {
+    /* background-image: url('../img/mine.jpg'); */
+    padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.message {
+    position: relative;
+    border-radius: 12px;
+    padding: 18px 16px;
+    font-size: 14px;
+    max-width: 70%;
+}
+
+.message.received {
+    background-color: white;
+    align-self: flex-start;
+}
+
+.message.sent {
+    background-color: #d5f9ba;
+}
+
+.message .time {
+    font-size: 10px;
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    color: #979797;
+}
+
+/* .card{
     border-radius: 20px;
     overflow: hidden;
-    /* padding: 10px 0; */
+    padding: 10px 0;
 }
 
 .card .card-header{
     padding: 13px 10px;
-}
+} */
 
-.time{
+/* .time{
     font-size: 10px;
     color: gray;
-}
+} */
 
-.sent{
+/* .sent{
     background-color: var(--sent-color);
-}
+} */
 
 .chat-panel{
     position: relative;
 }
 
 .input-section{
-    position: sticky;
+    /* position: sticky; */
+    padding: 19px 0;
 }
 
 .input-section .col{
