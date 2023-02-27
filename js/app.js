@@ -177,6 +177,8 @@ createApp({
             contacts: contacts,
             currentIndex: 0,
             inputValue: '',
+            contactValue: '',
+            // filteredContacts: 
             // now: DateTime.now(),
             // dateToParse: contacts[index].
         }
@@ -189,27 +191,40 @@ createApp({
     // },
 
     methods: {
-        toggleActive(index) {
+        setIndex(index) {
             this.currentIndex = index;
             // console.log('visibilità', this.contacts[index].visible);
             // console.log(contacts[index]);
             // console.log(contacts[this.currentIndex].messages[this.currentIndex].date)
+            this.inputValue = ''
+
 
         },
 
         addMessage(){
+            if (this.inputValue ===  ""){
+                return console.log('Messaggio vuoto!!!')
+            }else{
+                
+                const newMessage = { date: '10/01/2020 15:50:00', message: this.inputValue.trim(), status: 'sent'}
+                this.contacts[this.currentIndex].messages.push(newMessage)
+                this.inputValue = ''
+    
+                // if (this.contacts[this.currentIndex] === this.contacts[this.Index]){
+                // }
+                setTimeout(this.addAnswer, 2000)
+            }
+        },
 
-            const newMessage = { date: '10/01/2020 15:50:00', message: this.inputValue, status: 'sent'}
-            this.contacts[this.currentIndex].messages.push(newMessage)
-            this.inputValue = ''
-
+        addAnswer(){
+            const newAnswer = { date: '10/01/2020 15:50:00', message: 'Ok!', status: 'received' }
+            this.contacts[this.currentIndex].messages.push(newAnswer)
         }
     },
 
-    mounted() {
-        // console.log(contacts[this.currentIndex].messages[this.currentIndex].date)
+    updated(){
+        console.log(this.contactValue)
     }
-
 
 
     

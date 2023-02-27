@@ -108,7 +108,7 @@ a{
     color: gray;
 }
 
-.user-info:hover{
+.user-info:hover, .active{
     background-color: var(--hover-color);
 }
 

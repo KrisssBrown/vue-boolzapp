@@ -64,13 +64,12 @@
                             <span class="input-group-text" id="inputGroup-sizing-sm">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
-                            <input type="text" class="form-control my-form" aria-label="Sizing example input"
-                                aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" class="form-control my-form" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat" v-model="contactValue">
                         </div>
                     </div>
                     <div class="general-chat-section flex-grow-1">
                         <ul class="user-info d-flex gap-2 p-3 mb-0 contacts__item" v-for="(contact, index) in contacts"
-                            :class="index===currentIndex ? 'active': ''" @click="toggleActive(index)">
+                            :class="index===currentIndex ? 'active': ''" @click="setIndex(index)">
                             <li class="chat-avatar">
                                 <img :src="contact.avatar">
                             </li>
